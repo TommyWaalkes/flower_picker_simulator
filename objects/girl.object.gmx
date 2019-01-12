@@ -32,6 +32,12 @@ base_jump = 12
 jump_height = 0;
 global.flowers = 0; 
 
+handling_mod_forward_base = 3; 
+handling_mod_forward = handling_mod_forward_base; 
+handling_mod_back_base = -3; 
+handling_mod_back = handling_mod_back_base;
+inc_handling = .2; 
+
 inc_speed = .2;
 inc_anim = .003; 
 anim_base = inc_anim;
@@ -145,6 +151,34 @@ alarm[11] = score_refresh;
             jump = true; 
         }
     }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="flower_handling">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.flowers++; 
+global.handling_flowers++; 
+calc_handling();
+with(other){
+    instance_destroy(); 
 }
 </string>
           </argument>
@@ -404,6 +438,52 @@ with(other){
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="68">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = 3+(global.flowers*.1); 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="65">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>hspeed = handling_mod_back;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="6" enumb="56">
       <action>
         <libid>1</libid>
@@ -531,52 +611,6 @@ draw_text(34,34, "Flowers: "+string(global.flowers));
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="9" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hspeed = 5; 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>hspeed = 2;
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="9" enumb="32">

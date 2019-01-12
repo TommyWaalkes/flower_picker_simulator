@@ -28,7 +28,8 @@
             <string>global.flowers = 0; 
 global.jump_flowers = 0; 
 global.speed_flowers = 0; 
-global.flower_max = 20; 
+global.handling_flowers = 0; 
+global.flower_max = random_range(15, 30); 
 global.bat_max = 2; 
 global.distance = 0; 
 global.night = false;

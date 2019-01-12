@@ -68,13 +68,11 @@ surface_resize(application_surface, ww, hh);</code>
   <instances>
     <instance objName="girl" x="160" y="384" name="inst_2D8E6025" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="tracker" x="64" y="32" name="inst_38B3210B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="flower_generator" x="608" y="320" name="inst_8B7288C3" locked="0" code="size_spawn = false;&#xA;gold_spawn = false; &#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="flower_generator" x="608" y="320" name="inst_8B7288C3" locked="0" code="size_spawn = false;&#xA;gold_spawn = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="speed_meter" x="288" y="32" name="inst_C154A606" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cieling" x="-160" y="-32" name="inst_EA2B9449" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_generator" x="608" y="416" name="inst_824CFD78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground" x="0" y="416" name="inst_95C42C20" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground" x="480" y="416" name="inst_4DE4AB64" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ground" x="960" y="416" name="inst_D9F831B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ground_level_picker" x="608" y="256" name="inst_2C65249C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="collect_flowers" x="480" y="128" name="inst_FEC085A5" locked="0" code="next_room = level_2;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>

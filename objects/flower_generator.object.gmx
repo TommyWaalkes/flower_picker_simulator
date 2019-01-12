@@ -28,11 +28,44 @@
             <string>refresh = 20; 
 refresh_gold = 120;
 refresh_size = 100;  
+refresh_handling = 50; 
 alarm[0] = refresh;
 alarm[1] = refresh_gold; 
 alarm[2] = refresh_size; 
+alarm[3] = refresh_handling;
 gold_spawn = true;
 size_spawn = true;  
+handling_spawn = true; 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(handling_spawn){
+  pos_y = random_range(0,global.ground_level+32) 
+        if(position_empty(x, pos_y)){
+            instance_create(x,pos_y,flower_handling); 
+        }
+    }
+
+alarm[3] = refresh_handling + random_range(-10, 10); 
 </string>
           </argument>
         </arguments>
