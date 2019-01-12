@@ -82,8 +82,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\level_2</room>
     <room>rooms\level_1</room>
+    <room>rooms\level_2</room>
     <room>rooms\room0</room>
     <room>rooms\room1</room>
   </rooms>
